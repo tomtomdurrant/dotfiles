@@ -1,0 +1,11 @@
+[user]
+	name = Tom Durrant
+	email = tom_durrant@waters.com
+[core]
+	autocrlf = true
+	excludesFile = ~/.gitignore
+	longpaths = true
+[alias]
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	wash = clean -xfd --exclude=.vscode
