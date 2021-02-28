@@ -21,3 +21,12 @@ checkFont() {
 
 # Load aliases
 source ~/.aliases.sh
+export PATH=$PATH:/usr/local/go/bin
+
+# This syntax is specific to zsh
+function how_in() {
+  where="$1"
+  url=https://cht.sh/$where/"$@[2,-1]"
+  echo "Searching ${url}"
+  curl ${url}
+}
