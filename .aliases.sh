@@ -8,3 +8,7 @@ else
   alias ls='ls --color=auto'
 fi
 
+alias t="tmux"
+alias ta="t a -t"
+alias tls="t ls"
+alias tn="t new -t"
