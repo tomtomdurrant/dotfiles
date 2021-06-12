@@ -11,3 +11,8 @@ function how_in() {
   echo "Searching ${url}"
   curl ${url}
 }
+
+function conf() {
+  cd ~/.config/nvim
+  nvim .
+}
