@@ -1,12 +1,16 @@
 # ZSH Config
-export ZSH="/home/tom/.oh-my-zsh"
+if [[ `uname` == "Darwin" ]]; then
+  export ZSH="/Users/tom/.oh-my-zsh"
+else
+  export ZSH="/home/tom/.oh-my-zsh"
+  eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+  source /home/linuxbrew/.linuxbrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
+
+fi
 plugins=(sudo git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-source /home/linuxbrew/.linuxbrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
-
 # Terminal theme
 eval "$(starship init zsh)"
 
@@ -19,4 +23,4 @@ export NVM_DIR="$HOME/.nvm"
 source ~/.aliases.sh
 source ~/.functions.zsh
 
-export PATH=$PATH:/usr/local/go/bin
+#export PATH=$PATH:/usr/local/go/bin
