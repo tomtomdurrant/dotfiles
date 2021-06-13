@@ -1,4 +1,4 @@
-vim.g.mapLeader = ' '
+vim.g.mapleader = ' '
 
 local key_mapper = function(mode, key, result)
   vim.api.nvim_set_keymap(
@@ -8,6 +8,7 @@ local key_mapper = function(mode, key, result)
     {noremap = true, silent = true}
   )
 end
+key_mapper('n', '<Space>', '<nop>')
 
 key_mapper('', '<up>', '<nop>')
 key_mapper('', '<down>', '<nop>')
@@ -18,3 +19,7 @@ key_mapper('i', 'jk', '<ESC>')
 key_mapper('i', 'kj', '<ESC>')
 key_mapper('v', 'jk', '<ESC>')
 key_mapper('v', 'kj', '<ESC>')
+
+key_mapper('n', '<leader>gd', ':LspDef<CR>')
+key_mapper('n', '<leader>r', ':LspRename<CR>')
+
