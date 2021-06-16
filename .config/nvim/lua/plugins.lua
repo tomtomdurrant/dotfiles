@@ -19,15 +19,33 @@ require('packer').startup(function(use)
     use 'kabouzeid/nvim-lspinstall'
     use "hrsh7th/nvim-compe"
     use "onsails/lspkind-nvim"
+    use "nvim-lua/lsp-status.nvim"
 
     -- theme
     use 'folke/tokyonight.nvim'
     use 'kyazdani42/nvim-web-devicons'
---    use "glepnir/galaxyline.nvim"
+--    use {
+--   'hoob3rt/lualine.nvim',
+--      requires = {'kyazdani42/nvim-web-devicons', opt = true}
+--    }
     use {
-      'hoob3rt/lualine.nvim',
-      requires = {'kyazdani42/nvim-web-devicons', opt = true}
+      'glepnir/galaxyline.nvim',
+        branch = 'main',
+        -- your statusline
+        config = function() require'galaxyline-config' end,
+        -- some optional icons
+        requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
+--    use {
+--      'lewis6991/gitsigns.nvim',
+--      requires = {
+--        'nvim-lua/plenary.nvim'
+--      },
+--      config = function()
+--        require('gitsigns-config')
+--      end
+--    }
+    use 'mhinz/vim-signify'
 
 
 
