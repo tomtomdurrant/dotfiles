@@ -1,0 +1,19 @@
+sudo pacman -Syu
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay/
+makepkg -si
+yay -Sy yadm
+yadm clone https://github.com/tomtomdurrant/my-dotfiles
+yadm checkout $HOME
+sudo pacman -Syu zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo pacman -Syu linux-headers-510
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+mkdir -p .config/alacritty
+touch .config/alacritty/alacritty.yml
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install git-extras
+ripgrep

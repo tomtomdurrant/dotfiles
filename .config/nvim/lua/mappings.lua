@@ -20,6 +20,8 @@ key_mapper('i', 'kj', '<ESC>')
 key_mapper('v', 'jk', '<ESC>')
 key_mapper('v', 'kj', '<ESC>')
 
-key_mapper('n', '<leader>gd', ':LspDef<CR>')
-key_mapper('n', '<leader>r', ':LspRename<CR>')
+key_mapper('n', '<C-p>', ':lua require"telescope.builtin".find_files()<CR>')
+key_mapper('n', '<leader>fs', ':lua require"telescope.builtin".live_grep()<CR>')
+key_mapper('n', '<leader>fh', ':lua require"telescope.builtin".help_tags()<CR>')
+key_mapper('n', '<leader>fb', ':lua require"telescope.builtin".buffers()<CR>')
 
