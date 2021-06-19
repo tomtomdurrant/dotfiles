@@ -125,6 +125,12 @@ local function setup_servers()
     require"lspconfig"[server].setup(config)
   end
 end
+local nvim_lsp = require"lspconfig"
+local servers = { "pyright", "angularls", "tsserver" }
+for _, lsp in ipairs(servers) do
+  nvim_lsp[lsp].setup { on_attach = on_attach }
+end
+-- require"lspconfig.angularls".setup()
 
 setup_servers()
 
