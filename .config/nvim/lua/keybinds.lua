@@ -1,0 +1,18 @@
+local map = function(mode, key, result)
+  vim.api.nvim_set_keymap(
+    mode,
+    key,
+    result,
+    {noremap = true, silent = true}
+  )
+end
+
+-- Config
+vim.g.mapleader = " "
+map('n', '<Space>', '<nop') 
+
+-- Telescope
+map('n','<C-p>', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]])
+map('n','<Leader>fb', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]])
+map('n','<leader>fg', [[ <cmd>lua require('telescope.builtin').live_grep()<cr> ]])
+map('n','<leader>fh', [[<cmd>lua require('telescope.builtin').help_tags()<cr>]])
