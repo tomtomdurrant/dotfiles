@@ -62,6 +62,9 @@ cmd 'syntax enable'
 -- Enable filetype plugin
 cmd 'filetype plugin on'
 
+-- UI
+cmd[[colorscheme neon]]
+
 
 
 

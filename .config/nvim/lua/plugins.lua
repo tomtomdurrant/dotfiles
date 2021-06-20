@@ -12,6 +12,22 @@ require('packer').startup(function()
     use {
       'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
     }
+
+    -- Files
+    use 'kyazdani42/nvim-tree.lua'
+
+    -- Git 
+    use {'tpope/vim-fugitive'}
+
+    -- UI
+    use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
+    use 'rafamadriz/neon'
+
+
+    -- Comment
+    use 'terrortylor/nvim-comment'
+
+
  
 end)
 

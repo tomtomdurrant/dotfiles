@@ -16,3 +16,11 @@ map('n','<C-p>', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]])
 map('n','<Leader>fb', [[<Cmd>lua require('telescope.builtin').buffers()<CR>]])
 map('n','<leader>fg', [[ <cmd>lua require('telescope.builtin').live_grep()<cr> ]])
 map('n','<leader>fh', [[<cmd>lua require('telescope.builtin').help_tags()<cr>]])
+
+
+-- BufferLine
+map('n','<Leader>bn', ':BufferLineCycleNext<CR>')
+map('n','<Leader>bp', ':BufferLineCyclePrev<CR>')
+
+-- Nvim Tree
+map('n', '<C-n>', ':NvimTreeToggle<CR>')
