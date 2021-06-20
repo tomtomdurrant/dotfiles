@@ -3,3 +3,8 @@ require('config.plugins.bufferline-config')
 require('config.plugins.nvim-comment-config')
 require('config.plugins.nvim-tree-config')
 require('config.plugins.compe-config')
+-- require('config.plugins.lualine-config')
+require('config.plugins.lsp-status-config')
+require('config.plugins.autopair-config')
+require('config.plugins.galaxyline-config')
+

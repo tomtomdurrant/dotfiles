@@ -9,6 +9,7 @@ require('packer').startup(function(use)
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'hrsh7th/nvim-compe'
     use 'windwp/nvim-autopairs'
+    use 'nvim-lua/lsp-status.nvim'
 
 
     -- Telescope
@@ -25,6 +26,14 @@ require('packer').startup(function(use)
     -- UI
     use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
     use 'rafamadriz/neon'
+    -- use {'hoob3rt/lualine.nvim',
+    --   requires = {'kyazdani42/nvim-web-devicons'}
+    -- }
+    use { 'glepnir/galaxyline.nvim', branch = 'main',
+    -- some optional icons
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
+
 
 
     -- Comment

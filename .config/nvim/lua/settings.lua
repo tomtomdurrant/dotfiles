@@ -44,6 +44,7 @@ opt.gdefault = true
 -- Completion
 opt.completeopt = "menuone,noselect"
 opt.shortmess:append('c')
+vim.g.completion_confirm_key = ""
 
 -- Split options
 opt.splitbelow = true
@@ -63,6 +64,7 @@ cmd 'syntax enable'
 cmd 'filetype plugin on'
 
 -- UI
+vim.g.neon_style = "dark"
 cmd[[colorscheme neon]]
 
 
