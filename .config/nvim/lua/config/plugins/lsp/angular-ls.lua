@@ -10,4 +10,3 @@ require'lspconfig'.angularls.setup{
   end,
   on_attach = utils.default_on_attach
 }
-

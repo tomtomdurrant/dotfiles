@@ -1,5 +1,5 @@
 -- Plugins
-require('packer').startup(function()
+require('packer').startup(function(use)
     -- Packer
     use 'wbthomason/packer.nvim'
 
@@ -7,6 +7,9 @@ require('packer').startup(function()
     use 'neovim/nvim-lspconfig'
     use 'kabouzeid/nvim-lspinstall'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use 'hrsh7th/nvim-compe'
+    use 'windwp/nvim-autopairs'
+
 
     -- Telescope
     use {
@@ -16,7 +19,7 @@ require('packer').startup(function()
     -- Files
     use 'kyazdani42/nvim-tree.lua'
 
-    -- Git 
+    -- Git
     use {'tpope/vim-fugitive'}
 
     -- UI
@@ -26,9 +29,6 @@ require('packer').startup(function()
 
     -- Comment
     use 'terrortylor/nvim-comment'
-
-
- 
 end)
 
 require('config.plugins')

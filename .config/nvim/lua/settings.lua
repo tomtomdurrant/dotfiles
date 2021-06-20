@@ -42,7 +42,7 @@ opt.smartcase = true
 opt.gdefault = true
 
 -- Completion
-opt.completeopt = {'menuone', 'preview', 'noselect'}
+opt.completeopt = "menuone,noselect"
 opt.shortmess:append('c')
 
 -- Split options

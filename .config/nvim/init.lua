@@ -4,6 +4,6 @@ local cmd = vim.cmd
 
 require('plugins')
 require('settings')
-require('config.lsp')
+require('config.plugins.lsp')
 require('keybinds')
 
