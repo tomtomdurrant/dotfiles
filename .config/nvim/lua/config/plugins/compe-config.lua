@@ -52,17 +52,29 @@ _G.s_tab_complete = function()
     end
 end
 
-local npairs = require('nvim-autopairs')
+-- function _G.completions()
+--     local npairs = require("nvim-autopairs")
+--     if vim.fn.pumvisible() == 1 then
+--         if vim.fn.complete_info()["selected"] ~= -1 then
+--             return vim.fn["compe#confirm"]("<CR>")
+--         end
+--     end
+--     return npairs.check_break_line_char()
+-- end
+-- 
+-- vim.api.nvim_set_keymap("i", "<CR>", "v:lua.completions()", {expr = true})
 
-_G.completion_confirm = function()
-  if vim.fn.pumvisible() ~= 0  then
-    if vim.fn.complete_info()["selected"] ~= -1 then
-      return vim.fn["compe#confirm"](npairs.esc("<cr>"))
-    else
-      return npairs.esc("<cr>")
-    end
-  else
-    return npairs.autopairs_cr()
-  end
-end
+-- local npairs = require('nvim-autopairs')
+-- 
+-- _G.completion_confirm = function()
+--   if vim.fn.pumvisible() ~= 0  then
+--     if vim.fn.complete_info()["selected"] ~= -1 then
+--       return vim.fn["compe#confirm"](npairs.esc("<cr>"))
+--     else
+--       return npairs.esc("<cr>")
+--     end
+--   else
+--     return npairs.autopairs_cr()
+--   end
+-- end
 

@@ -10,6 +10,7 @@ require('packer').startup(function(use)
     use 'hrsh7th/nvim-compe'
     use 'windwp/nvim-autopairs'
     use 'nvim-lua/lsp-status.nvim'
+    use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
 
 
     -- Telescope
@@ -22,6 +23,11 @@ require('packer').startup(function(use)
 
     -- Git
     use {'tpope/vim-fugitive'}
+    use { 'lewis6991/gitsigns.nvim', requires = {
+        'nvim-lua/plenary.nvim'
+      }
+    }
+
 
     -- UI
     use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
@@ -30,9 +36,10 @@ require('packer').startup(function(use)
     --   requires = {'kyazdani42/nvim-web-devicons'}
     -- }
     use { 'glepnir/galaxyline.nvim', branch = 'main',
-    -- some optional icons
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+        -- some optional icons
+        requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
+    use 'folke/lsp-colors.nvim'
 
 
 

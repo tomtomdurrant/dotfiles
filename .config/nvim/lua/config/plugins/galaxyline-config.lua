@@ -47,8 +47,8 @@ end
 gls.left[1] = {
     ViMode = {
         provider = function()
-            local mode_color = {n = colors.white, i = colors.green, v = colors.blue, V = colors.blue, [''] = colors.yellow, c = colors.purple, R = colors.blue}
-            vim.api.nvim_command('hi GalaxyViMode guifg=' .. mode_color[vim.fn.mode()])
+            --local mode_color = {n = colors.white, i = colors.green, v = colors.blue, V = colors.blue, [''] = colors.yellow, c = colors.purple, R = colors.blue}
+            --vim.api.nvim_command('hi GalaxyViMode guifg=' .. mode_color[vim.fn.mode()])
             return '   '
         end,
         highlight = {colors.white, colors.black, 'bold'}
@@ -58,7 +58,7 @@ gls.left[1] = {
 gls.left[2] = {
     NameText = {
         provider = function()
-            return 'VapourNvim '
+            return 'Nvim '
         end,
         highlight = {colors.white, colors.black, 'bold'},
         separator = separators.bRight,
