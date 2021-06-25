@@ -10,4 +10,6 @@ require('config.plugins.galaxyline-config')
 require('config.plugins.gitsigns-config')
 require('config.plugins.trouble-config')
 require('config.plugins.lsp-color-config')
+require('config.plugins.nvim-lightbulb-config')
+require('config.plugins.whichkey-config')
 

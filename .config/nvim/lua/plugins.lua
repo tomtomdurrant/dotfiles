@@ -8,10 +8,15 @@ require('packer').startup(function(use)
     use 'kabouzeid/nvim-lspinstall'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'hrsh7th/nvim-compe'
-    use 'windwp/nvim-autopairs'
     use 'nvim-lua/lsp-status.nvim'
     use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
+    use 'kosayoda/nvim-lightbulb'
+    use {"glepnir/lspsaga.nvim" }
 
+    -- General Help
+    use 'windwp/nvim-autopairs'
+    use "folke/which-key.nvim"
+    use 'tpope/vim-surround'
 
     -- Telescope
     use {
@@ -32,15 +37,10 @@ require('packer').startup(function(use)
     -- UI
     use {'akinsho/nvim-bufferline.lua', requires = 'kyazdani42/nvim-web-devicons'}
     use 'rafamadriz/neon'
-    -- use {'hoob3rt/lualine.nvim',
-    --   requires = {'kyazdani42/nvim-web-devicons'}
-    -- }
     use { 'glepnir/galaxyline.nvim', branch = 'main',
-        -- some optional icons
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
     use 'folke/lsp-colors.nvim'
-
 
 
     -- Comment

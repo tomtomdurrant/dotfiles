@@ -7,6 +7,7 @@ local bind = vim.api.nvim_set_keymap
 -- Wildmenu
 opt.wildmode = {'longest', 'list', 'full'}
 opt.wildmenu = true
+opt.timeoutlen = 200
 
 -- Hidden buffers to switch buffers without saving
 opt.hidden = true
@@ -66,6 +67,7 @@ cmd 'filetype plugin on'
 -- UI
 vim.g.neon_style = "dark"
 cmd[[colorscheme neon]]
+cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
 
 
 

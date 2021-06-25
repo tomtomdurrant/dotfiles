@@ -8,8 +8,8 @@ local map = function(mode, key, result)
 end
 
 -- Config
-vim.g.mapleader = " "
-map('n', '<Space>', '<nop')
+-- vim.g.mapleader = " "
+-- map('n', '<Space>', '<nop')
 
 -- Telescope
 map('n','<C-p>', [[<Cmd>lua require('telescope.builtin').find_files()<CR>]])
@@ -25,7 +25,7 @@ map('n','<Leader>bp', ':BufferLineCyclePrev<CR>')
 -- Nvim Tree
 map('n', '<C-n>', ':NvimTreeToggle<CR>')
 
-
+map('n', '<C-_>','<Cmd>CommentToggle<CR>')
 -- Compe
 vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})

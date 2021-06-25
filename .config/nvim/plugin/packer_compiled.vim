@@ -80,9 +80,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/tom/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/home/tom/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
+  },
   ["lsp-status.nvim"] = {
     loaded = true,
     path = "/home/tom/.local/share/nvim/site/pack/packer/start/lsp-status.nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/tom/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
   neon = {
     loaded = true,
@@ -103,6 +111,10 @@ _G.packer_plugins = {
   ["nvim-compe"] = {
     loaded = true,
     path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-compe"
+  },
+  ["nvim-lightbulb"] = {
+    loaded = true,
+    path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-lightbulb"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -147,6 +159,14 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/tom/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/tom/.local/share/nvim/site/pack/packer/start/vim-surround"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/tom/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   }
 }
 
