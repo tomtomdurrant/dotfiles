@@ -11,6 +11,7 @@ opt.timeoutlen = 200
 
 -- Hidden buffers to switch buffers without saving
 opt.hidden = true
+opt.confirm = true
 
 -- Enable mouse support
 opt.mouse = 'a'

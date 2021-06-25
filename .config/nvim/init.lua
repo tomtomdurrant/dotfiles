@@ -6,4 +6,3 @@ require('plugins')
 require('settings')
 require('config.plugins.lsp')
 require('keybinds')
-
