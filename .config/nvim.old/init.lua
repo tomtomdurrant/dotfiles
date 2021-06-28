@@ -1,8 +1,8 @@
+local execute = vim.api.nvim_command
+local fn = vim.fn
+local cmd = vim.cmd
+
 require('plugins')
 require('settings')
-require('mappings')
-require('compe-config')
---require('statusline-config')
-require('galaxyline-config')
-
-
+require('config.plugins.lsp')
+require('keybinds')

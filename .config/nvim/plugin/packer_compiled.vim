@@ -47,8 +47,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/tom/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/tom/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/tom/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/tom/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/tom/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
+local package_path_str = "/Users/tom/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/tom/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/tom/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/tom/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/tom/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -72,105 +72,262 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["FTerm.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/FTerm.nvim"
+  },
+  ["TrueZen.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/TrueZen.nvim"
+  },
+  ["barbar.nvim"] = {
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/barbar.nvim"
+  },
+  ["bracey.vim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/bracey.vim"
+  },
+  ["codi.vim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/codi.vim"
+  },
+  ["dashboard-nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/dashboard-nvim"
+  },
+  ["dial.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/dial.nvim"
+  },
+  ["friendly-snippets"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/friendly-snippets"
+  },
   ["galaxyline.nvim"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/galaxyline.nvim"
+  },
+  ["git-blame.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/git-blame.nvim"
   },
   ["gitsigns.nvim"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/gitsigns.nvim"
   },
-  ["lsp-colors.nvim"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim"
+  ["hop.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/hop.nvim"
   },
-  ["lsp-status.nvim"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/lsp-status.nvim"
+  ["lsp-rooter.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/lsp-rooter.nvim"
   },
   ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/lspsaga.nvim"
   },
-  neon = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/neon"
+  ["markdown-preview.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim"
+  },
+  ["numb.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/numb.nvim"
+  },
+  ["nvcode-color-schemes.vim"] = {
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvcode-color-schemes.vim"
   },
   ["nvim-autopairs"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-autopairs"
   },
-  ["nvim-bufferline.lua"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+  ["nvim-bqf"] = {
+    loaded = false,
+    needs_bufread = true,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-bqf"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-colorizer.lua"
   },
   ["nvim-comment"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-comment"
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-comment"
   },
   ["nvim-compe"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    after_files = { "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe.vim" },
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-compe"
   },
-  ["nvim-lightbulb"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-lightbulb"
+  ["nvim-dap"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-dap"
   },
   ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-lspinstall"
+  },
+  ["nvim-spectre"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-spectre"
   },
   ["nvim-tree.lua"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    commands = { "NvimTreeToggle" },
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    config = { true },
+    loaded = false,
+    needs_bufread = true,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-treesitter"
+  },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-ts-context-commentstring"
   },
   ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  playground = {
+    loaded = false,
+    needs_bufread = true,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/playground"
   },
   ["plenary.nvim"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/plenary.nvim"
   },
   ["popup.nvim"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/popup.nvim"
+  },
+  ["symbols-outline.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/symbols-outline.nvim"
+  },
+  ["telescope-fzy-native.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/telescope-fzy-native.nvim"
+  },
+  ["telescope-project.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/telescope-project.nvim"
   },
   ["telescope.nvim"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/telescope.nvim"
   },
   ["trouble.nvim"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/trouble.nvim"
   },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  ["vim-matchup"] = {
+    after_files = { "/Users/tom/.local/share/nvim/site/pack/packer/opt/vim-matchup/after/plugin/matchit.vim" },
+    loaded = false,
+    needs_bufread = true,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/vim-matchup"
   },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/vim-surround"
+  ["vim-sanegx"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/vim-sanegx"
+  },
+  ["vim-vsnip"] = {
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/vim-vsnip"
+  },
+  vimtex = {
+    loaded = false,
+    needs_bufread = true,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/vimtex"
   },
   ["which-key.nvim"] = {
-    loaded = true,
-    path = "/home/tom/.local/share/nvim/site/pack/packer/start/which-key.nvim"
+    config = { true },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/tom/.local/share/nvim/site/pack/packer/opt/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+vim.cmd [[command! -nargs=* -range -bang -complete=file NvimTreeToggle lua require("packer.load")({'nvim-tree.lua'}, { cmd = "NvimTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]]
+time([[Defining lazy-load commands]], false)
+
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-autopairs', 'nvim-compe'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'gitsigns.nvim', 'nvim-treesitter'}, { event = "BufRead *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 END
