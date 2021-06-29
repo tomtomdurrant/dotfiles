@@ -79,21 +79,25 @@ return require("packer").startup(function(use)
     use {"romgrk/barbar.nvim", config = require_plugin("barbar.nvim"), opt = true}
 
     use {"hrsh7th/vim-vsnip", config = require_plugin("vim-vsnip"), opt = true}
-    use 'rafamadriz/neon'
-    require_plugin('neon')
+    -- use 'rafamadriz/neon'
+    -- require_plugin('neon')
+
+    use {"akinsho/nvim-toggleterm.lua"}
+    require_plugin('nvim-toggleterm')
+
 
 
     -- Extras
     if O.extras then
         -- Interactive scratchpad
-        use {'metakirby5/codi.vim', opt = true}
-        require_plugin('codi.vim')
+        -- use {'metakirby5/codi.vim', opt = true}
+        -- require_plugin('codi.vim')
         -- Markdown preview
-        use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install', opt = true}
-        require_plugin('markdown-preview.nvim')
+        -- use {'iamcco/markdown-preview.nvim', run = 'cd app && npm install', opt = true}
+        -- require_plugin('markdown-preview.nvim')
         -- Floating terminal
-        use {'numToStr/FTerm.nvim', opt = true}
-        require_plugin('FTerm.nvim')
+        -- use {'numToStr/FTerm.nvim', opt = true}
+        -- require_plugin('FTerm.nvim')
         -- Enhanced increment/decrement
         use {'monaqa/dial.nvim', opt = true}
         require_plugin('dial.nvim')
@@ -110,16 +114,16 @@ return require("packer").startup(function(use)
         use {'norcalli/nvim-colorizer.lua', opt = true}
         require_plugin('nvim-colorizer.lua')
         -- Search & Replace
-        use {'windwp/nvim-spectre', opt = true}
-        require_plugin('nvim-spectre')
+        -- use {'windwp/nvim-spectre', opt = true}
+        -- require_plugin('nvim-spectre')
         use {'simrat39/symbols-outline.nvim', opt = true}
         require_plugin('symbols-outline.nvim')
         -- Treesitter playground
         use {'nvim-treesitter/playground', opt = true}
         require_plugin('playground')
         -- Latex
-        use {"lervag/vimtex", opt = true}
-        require_plugin("vimtex")
+        -- use {"lervag/vimtex", opt = true}
+        -- require_plugin("vimtex")
         -- matchup
         use {'andymass/vim-matchup', opt = true}
         require_plugin('vim-matchup')
@@ -133,7 +137,7 @@ return require("packer").startup(function(use)
         use {'f-person/git-blame.nvim', opt = true}
         require_plugin("git-blame.nvim")
         -- TODO remove when open on dir is supported by nvimtree
-        --  use "kevinhwang91/rnvimr"
+        use "kevinhwang91/rnvimr"
         use {"nvim-telescope/telescope-fzy-native.nvim", opt = true}
         use {"nvim-telescope/telescope-project.nvim", opt = true}
         require_plugin('telescope-project.nvim')
@@ -148,8 +152,8 @@ return require("packer").startup(function(use)
         use {"kevinhwang91/nvim-bqf", opt = true}
         require_plugin("nvim-bqf")
 
-        use {"ahmedkhalf/lsp-rooter.nvim", opt = true} -- with this nvim-tree will follow you
-        require_plugin('lsp-rooter.nvim')
+        -- use {"ahmedkhalf/lsp-rooter.nvim", opt = true} -- with this nvim-tree will follow you
+        -- require_plugin('lsp-rooter.nvim')
 
         use {"glepnir/lspsaga.nvim", opt = true}
         require_plugin("lspsaga.nvim")

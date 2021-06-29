@@ -26,12 +26,12 @@ if O.extras then
     require('lv-dial')
     require('lv-hop')
     require('lv-colorizer')
-    require('lv-spectre')
+    -- require('lv-spectre')
     require('lv-symbols-outline')
     require('lv-vimtex')
     require('lv-zen')
     require('lv-dashboard')
-    require('lv-lsp-rooter')
+    -- require('lv-lsp-rooter')
 end
 
 -- TODO is there a way to do this without vimscript

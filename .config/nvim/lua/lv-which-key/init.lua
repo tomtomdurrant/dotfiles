@@ -91,9 +91,12 @@ local mappings = {
       w = {"<cmd>BufferWipeout<cr>", "wipeout buffer"},
       e = {"<cmd>BufferCloseAllButCurrent<cr>", "close all but current buffer"},
       h = {"<cmd>BufferCloseBuffersLeft<cr>", "close all buffers to the left"},
+      n = {"<cmd>BufferNext<cr>", "next buffer"},
+      p = {"<cmd>BufferPrevious<cr>", "previous buffer"},
       l = {"<cmd>BufferCloseBuffersRight<cr>", "close all BufferLines to the right"},
       D = {"<cmd>BufferOrderByDirectory<cr>", "sort BufferLines automatically by directory"},
       L = {"<cmd>BufferOrderByLanguage<cr>", "sort BufferLines automatically by language"},
+      
     },
 
     -- ["/"] = {"<cmd>CommentToggle<cr>", "Comment"},
@@ -178,6 +181,9 @@ local mappings = {
         name = "Session",
         s = {"<cmd>SessionSave<cr>", "Save Session"},
         l = {"<cmd>SessionLoad<cr>", "Load Session"}
+    },
+    T = {
+        name = "Terminal",
     },
     -- extras
     z = {
