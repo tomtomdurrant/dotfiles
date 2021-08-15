@@ -1,46 +1,13 @@
-#colors:
-#  # Default colors
-#  primary:
-#    background: '0x292C3E'
-#    foreground: '0xEBEBEB'
-#
-#  # Cursor colors
-#  cursor:
-#    text: '0xFF261E'
-#    cursor: '0xFF261E'
-#
-#  # Normal colors
-#  normal:
-#    black:   '0x0d0d0d'
-#    red:     '0xFF301B'
-#    green:   '0xA0E521'
-#    yellow:  '0xFFC620'
-#    blue:    '0x1BA6FA'
-#    magenta: '0x8763B8'
-#    cyan:    '0x21DEEF'
-#    white:   '0xEBEBEB'
-#
-#  # Bright colors
-#  bright:
-#    black:   '0x6D7070'
-#    red:     '0xFF4352'
-#    green:   '0xB8E466'
-#    yellow:  '0xFFD750'
-#    blue:    '0x1BA6FA'
-#    magenta: '0xA578EA'
-#    cyan:    '0x73FBF1'
-#    white:   '0xFEFEF8'
-
 # TokyoNight Alacritty Colors
 colors:
   # Default colors
   primary:
-    background: '0x24283b'
+    background: '0x1a1b26'
     foreground: '0xc0caf5'
 
   # Normal colors
   normal:
-    black:   '0x1D202F'
+    black:   '0x15161E'
     red:     '0xf7768e'
     green:   '0x9ece6a'
     yellow:  '0xe0af68'
@@ -73,15 +40,15 @@ draw_bold_text_with_bright_colors: true
 
 font:
   normal:
-    family: FiraMono Nerd Font
-    style: regular
+    family: DankMono Nerd Font
+    #style: regular
   bold:
-    family: FiraMono Nerd Font
-    style: Bold
+    family: DankMono Nerd Font
+    #style: Bold
   bold_italic: 
-    family: VictorMono Nerd Font
-    style: SemiBold Italic
+    family: DankMono Nerd Font
+    #style: SemiBold Italic
   italic: 
-    family: VictorMono Nerd Font
-    style: Medium Italic
+    family: DankMono Nerd Font
+    #style: Medium Italic
   size: 16
