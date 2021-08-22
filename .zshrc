@@ -1,6 +1,6 @@
 # ZSH Config
 if [[ `uname` == "Darwin" ]]; then
-  export ZSH="/Users/tom/.oh-my-zsh"
+  export ZSH="$HOME/.oh-my-zsh"
 else
   export ZSH="/home/tom/.oh-my-zsh"
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
@@ -22,5 +22,7 @@ export NVM_DIR="$HOME/.nvm"
 # Load aliases
 source ~/.aliases.sh
 source ~/.functions.zsh
+
+export EDITOR="nvim"
 
 #export PATH=$PATH:/usr/local/go/bin

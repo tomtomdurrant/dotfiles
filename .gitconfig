@@ -3,3 +3,7 @@
 	email = tomchdurrant@gmail.com
 [color]
 	ui = auto
+
+[includeIf "gitdir:~/work/"]
+    path = ~/work/.gitconfig
+
