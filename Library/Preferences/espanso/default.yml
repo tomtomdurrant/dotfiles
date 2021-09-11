@@ -78,4 +78,4 @@ matches:
     replace: "07527783642"
 
   - trigger: ":w@"
-    replace: "thomas.durrant@musclefood.com"
+    replace: "tom.durrant@musclefood.com"
