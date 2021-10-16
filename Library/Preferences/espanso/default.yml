@@ -57,7 +57,8 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: 'echo `date -v -1d "+[[%Y-%m-%d|<< Yesterday]]"`'' | ''`date -v +1d "+[[%Y-%m-%d|Tommorrow >>]]"`'
+          cmd: "echo `date -v -1d \"+[[%Y-%m-%d|<< Yesterday]]\"`' | '`date -v +1d \"+[[%Y-%m-%d|Tommorrow >>]]\"`"
+
 
     # Breadcrumb Windows
   - trigger: ":bc"
@@ -79,3 +80,19 @@ matches:
 
   - trigger: ":w@"
     replace: "tom.durrant@musclefood.com"
+      
+  - trigger: ":55"
+    replace: "5555 4444 3333 1111"
+      
+  - trigger: ":add"
+    replace: "Apartment 29 1 Jersey Street Manchester M4 6JA"
+  
+  - trigger: ":te"
+    replace: "{{output}}"
+    vars: 
+      - name: output
+        type: shell
+        params:
+          cmd: echo "tomtest` date +"%d-%B-%H-%M"`@musclefood.com"
+ 
+
