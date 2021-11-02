@@ -8,3 +8,5 @@
     path = ~/work/.gitconfig
 
 
+[pull]
+	rebase = false
