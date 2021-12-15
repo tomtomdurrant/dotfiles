@@ -94,5 +94,8 @@ matches:
         type: shell
         params:
           cmd: echo "tomtest` date +"%d-%B-%H-%M"`@musclefood.com"
+
+  - trigger: ":ady"
+    replace: "5555 3412 4444 1115"
  
 
