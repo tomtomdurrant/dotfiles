@@ -1,3 +1,13 @@
+import:
+  - ~/.config/alacritty/themes/aura-theme.yml
+
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
+
 window:
   padding:
     x: 4
@@ -12,52 +22,94 @@ font:
   bold:
     family: DankMono Nerd Font
     #style: Bold
-  bold_italic: 
+  bold_italic:
     family: DankMono Nerd Font
     #style: SemiBold Italic
-  italic: 
+  italic:
     family: DankMono Nerd Font
     #style: Medium Italic
   size: 16
+  use_thin_strokes: true
 
-env:
-  TERM: xterm-256color
+# env:
+#   TERM: xterm-256color
 
+key_bindings:
+  - { key: Key0, mods: Alt, chars: "º" }
+  - { key: Key1, mods: Alt, chars: "¡" }
+  - { key: Key2, mods: Alt, chars: "€" }
+  - { key: Key3, mods: Alt, chars: "#" }
+  - { key: Key4, mods: Alt, chars: "¢" }
+  - { key: Key5, mods: Alt, chars: "∞" }
+  - { key: Key6, mods: Alt, chars: "§" }
+  - { key: Key7, mods: Alt, chars: "¶" }
+  - { key: Key8, mods: Alt, chars: "•" }
+  - { key: Key9, mods: Alt, chars: "ª" }
+  - {
+      key: Comma,
+      mods: Command,
+      command:
+        {
+          program: "sh",
+          args: ["-c", "open ~/.config/alacritty/alacritty.yml"],
+        },
+    }
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: Space, mods: Alt, chars: " " }
+  - { key: Back, mods: Super, chars: "\x15" } # delete word/line
+  - { key: Left, mods: Alt, chars: "\x1bb" } # one word left
+  - { key: Right, mods: Alt, chars: "\x1bf" } # one word right
+  - { key: Left, mods: Command, chars: "\x1bOH", mode: AppCursor } # Home
+  - { key: Right, mods: Command, chars: "\x1bOF", mode: AppCursor } # End
 
-# Catppuccino Light Melya
-colors:
-  # Default colors
-  primary:
-    background: '0x150b26'
-    foreground: '0xfdebc3'
+# Catppuccin!
+# colors:
+#   # Default colors
+#   primary:
+#     background: "#1E1E28"
+#     foreground: "#DADAE8"
 
-  # Colors the cursor will use if `custom_cursor_colors` is true
-  cursor:
-    text: '0xfdebc3'
-    cursor: '0x150b26'
+#   # Colors the cursor will use if `custom_cursor_colors` is true
+#   cursor:
+#     text: "#1E1E28"
+#     cursor: "#B1E3AD"
 
-  # Normal colors
-  normal:
-    black:   '0x393b44'
-    red:     '0xcf4f6d'
-    green:   '0x51ee72'
-    yellow:  '0xffe070'
-    blue:    '0x96e2f0'
-    magenta: '0xd97bf2'
-    cyan:    '0x63cdcf'
-    white:   '0xdfdfe0'
+#   # Normal colors
+#   normal:
+#     black: "#6E6C7E"
+#     red: "#E38C8F"
+#     green: "#B1E3AD"
+#     yellow: "#EBDDAA"
+#     blue: "#A4B9EF"
+#     magenta: "#C6AAE8"
+#     cyan: "#E5B4E2"
+#     white: "#DADAE8"
 
-  # Bright colors
-  bright:
-    black:   '0x7f8c98'
-    red:     '0xe06c75'
-    green:   '0x58cd8b'
-    yellow:  '0xffe37e'
-    blue:    '0x84cee4'
-    magenta: '0xb8a1e3'
-    cyan:    '0x59f0ff'
-    white:   '0xfdebc3'
+#   # Bright colors
+#   bright:
+#     black: "#6E6C7E"
+#     red: "#E38C8F"
+#     green: "#B1E3AD"
+#     yellow: "#EBDDAA"
+#     blue: "#A4B9EF"
+#     magenta: "#C6AAE8"
+#     cyan: "#E5B4E2"
+#     white: "#DADAE8"
 
-  indexed_colors:
-    - { index: 16, color: '0xffe37e' }
-    - { index: 17, color: '0xe06c75' }
+#   indexed_colors:
+#     - { index: 16, color: "#F2CECF" }
+#     - { index: 17, color: "#3E4058" }
+
+selection:
+  # This string contains all characters that are used as separators for
+  # "semantic words" in Alacritty.
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+hints:
+  enabled:
+    - regex:
+        "(ipfs:|ipns:|magnet:|mailto:|gemini:|gopher:|https:|http:|news:|file:|git:|ssh:|ftp:)\
+        [^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`]+"
+      command: open
+      mouse:
+        enabled: true
