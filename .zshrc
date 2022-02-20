@@ -1,8 +1,4 @@
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
 # ZSH Config
 bindkey -v 
 if [[ `uname` == "Darwin" ]]; then
@@ -23,28 +19,22 @@ export EDITOR="nvim"
 if which lvim >/dev/null 2>&1; then
   export EDITOR="lvim"
 fi
-
-
-export PATH=$PATH:~/.local/bin
-export PATH=$PATH:~/.dotnet
+. functions.zsh
+. aliases.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# Use fnm instead of nvm 
-eval "$(fnm env)"
 
-# Load aliases
-source ~/.local/aliases.sh
-source ~/.local/functions.zsh
+# Use fnm instead of nvm 
+if [ -d ~/.fnm ]
+then
+  eval "$(fnm env)"
+else 
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
+
 
 eval "$(zoxide init --cmd j zsh)"
 
-
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 

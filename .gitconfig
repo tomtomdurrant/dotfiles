@@ -12,3 +12,5 @@
 	rebase = false
 [core]
 	autocrlf = input
+[alias]
+	up = !git push -u origin HEAD
