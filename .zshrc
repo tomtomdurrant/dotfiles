@@ -8,7 +8,7 @@ else
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
   source /home/linuxbrew/.linuxbrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
 fi
-plugins=(sudo git vi-mode tmux zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(sudo git vi-mode zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
