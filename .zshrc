@@ -1,4 +1,9 @@
 
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
+
 # ZSH Config
 bindkey -v 
 if [[ `uname` == "Darwin" ]]; then
@@ -14,6 +19,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 # Terminal theme
 eval "$(starship init zsh)"
+
 
 export EDITOR="nvim"
 if which lvim >/dev/null 2>&1; then
@@ -38,3 +44,8 @@ fi
 eval "$(zoxide init --cmd j zsh)"
 
 
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
