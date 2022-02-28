@@ -20,7 +20,6 @@ source $ZSH/oh-my-zsh.sh
 # Terminal theme
 eval "$(starship init zsh)"
 
-
 export EDITOR="nvim"
 if which lvim >/dev/null 2>&1; then
   export EDITOR="lvim"
@@ -40,9 +39,8 @@ else
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 
-
 eval "$(zoxide init --cmd j zsh)"
-
+eval $(thefuck --alias)
 
 
 #### FIG ENV VARIABLES ####

@@ -1,2 +1,21 @@
 [directory]
 fish_style_pwd_dir_length=1
+
+[azure]
+disabled = false
+format = "on [$symbol($subscription)]($style) "
+symbol = "ﴃ "
+style = "blue bold"
+
+[memory_usage]
+disabled = false
+threshold = -1
+style = "bold dimmed green"
+symbol = " "
+format = "$symbol[${ram}(\\${swap})]($style) "
+
+[sudo]
+style = "bold green"
+symbol = "👩‍💻 "
+disabled = false
+

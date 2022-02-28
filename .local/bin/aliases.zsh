@@ -19,3 +19,10 @@ alias tn="t new -t"
 alias mv='mv -i'
 alias cp='cp -i'
 alias ln='ln -i'
+
+# git checkout
+alias fj=fzf-git-checkout
+
+# homebrew
+alias bi='brew install'
+alias abi='arch -arm64 brew install'
