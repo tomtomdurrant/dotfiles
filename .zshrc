@@ -26,6 +26,7 @@ if which lvim >/dev/null 2>&1; then
 fi
 . functions.zsh
 . aliases.zsh
+# . bindings.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
