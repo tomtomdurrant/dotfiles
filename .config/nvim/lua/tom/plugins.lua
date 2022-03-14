@@ -48,6 +48,8 @@ return packer.startup(function(use)
 
 	use "terrortylor/nvim-comment"
 	-- use "JoosepAlviste/nvim-ts-context-commentstring"
+
+	-- File Tree
 	use "kyazdani42/nvim-tree.lua"
 	use "kyazdani42/nvim-web-devicons" -- optional, for file icon
 	use "lukas-reineke/indent-blankline.nvim"
@@ -58,6 +60,8 @@ return packer.startup(function(use)
 	use "akinsho/bufferline.nvim"
 	use "famiu/bufdelete.nvim"
 	use "nvim-lualine/lualine.nvim"
+	use "editorconfig/editorconfig-vim"
+	use "goolord/alpha-nvim"
 
 	-- Treesitter
 	use({
@@ -75,11 +79,15 @@ return packer.startup(function(use)
 	use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 	use "jose-elias-alvarez/nvim-lsp-ts-utils" -- more lsp for typescript
 	use "b0o/schemastore.nvim" -- list of json schemas
-	use "glepnir/lspsaga.nvim"
 	use "RishabhRD/nvim-lsputils"
 	use "ray-x/lsp_signature.nvim"
 	use "folke/trouble.nvim"
 	use "github/copilot.vim"
+	use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
+	use "filipdutescu/renamer.nvim"
+
+	-- language specific
+	use "ckipp01/stylua-nvim"
 
 	-- cmp plugins
 	use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -104,6 +112,9 @@ return packer.startup(function(use)
 	use "christianchiarulli/nvcode-color-schemes.vim"
 	use "mangeshrex/everblush.vim"
 	use "savq/melange"
+
+	-- testing
+	use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

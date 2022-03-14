@@ -1,8 +1,9 @@
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init zsh pre)"
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
+
+
 
 # ZSH Config
 bindkey -v 
@@ -21,9 +22,6 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 
 export EDITOR="nvim"
-if which lvim >/dev/null 2>&1; then
-  export EDITOR="lvim"
-fi
 . functions.zsh
 . aliases.zsh
 # . bindings.zsh
@@ -44,7 +42,7 @@ eval "$(zoxide init --cmd j zsh)"
 eval $(thefuck --alias)
 
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
+
+
+# Fig post block. Keep at the bottom of this file.
+eval "$(fig init zsh post)"

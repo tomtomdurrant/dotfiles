@@ -140,7 +140,7 @@ local mappings = {
 
 	l = {
 		name = "LSP",
-		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+		a = { "<cmd>CodeActionMenu<cr>", "Code Action" },
 		d = {
 			"<cmd>Telescope lsp_document_diagnostics<cr>",
 			"Document Diagnostics",
@@ -162,7 +162,7 @@ local mappings = {
 		},
 		l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 		q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+		r = { "<cmd>lua require('renamer').rename()<cr>", "Rename" },
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
 		S = {
 			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
@@ -207,6 +207,10 @@ local mappings = {
 		h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
 		v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
 	},
+	u = {
+		name = "Ultest",
+		s = "<Plug>(ultest-summary-toggle)<cr>",
+	},
 }
 
 -- which_key.setup({
@@ -220,6 +224,7 @@ which_key.register(mappings, opts)
 which_key.register({
 	d = "Go to definiton",
 	D = "Go to declaration",
+	l = "Show line diagnostics",
 }, {
 	prefix = "g",
 })

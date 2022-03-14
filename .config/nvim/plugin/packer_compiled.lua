@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["alpha-nvim"] = {
+    loaded = true,
+    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   ["bufdelete.nvim"] = {
     loaded = true,
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/bufdelete.nvim",
@@ -104,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/cmp-path",
@@ -118,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
+  },
+  ["editorconfig-vim"] = {
+    loaded = true,
+    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
+    url = "https://github.com/editorconfig/editorconfig-vim"
   },
   ["everblush.vim"] = {
     loaded = true,
@@ -148,11 +163,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
-  },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -188,6 +198,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-code-action-menu"] = {
+    commands = { "CodeActionMenu" },
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/opt/nvim-code-action-menu",
+    url = "https://github.com/weilbith/nvim-code-action-menu"
   },
   ["nvim-comment"] = {
     loaded = true,
@@ -249,10 +267,20 @@ _G.packer_plugins = {
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["renamer.nvim"] = {
+    loaded = true,
+    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/renamer.nvim",
+    url = "https://github.com/filipdutescu/renamer.nvim"
+  },
   ["schemastore.nvim"] = {
     loaded = true,
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
     url = "https://github.com/b0o/schemastore.nvim"
+  },
+  ["stylua-nvim"] = {
+    loaded = true,
+    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/stylua-nvim",
+    url = "https://github.com/ckipp01/stylua-nvim"
   },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,
@@ -289,6 +317,16 @@ _G.packer_plugins = {
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
     url = "https://github.com/bluz71/vim-moonfly-colors"
   },
+  ["vim-test"] = {
+    loaded = true,
+    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/vim-test",
+    url = "https://github.com/vim-test/vim-test"
+  },
+  ["vim-ultest"] = {
+    loaded = true,
+    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/vim-ultest",
+    url = "https://github.com/rcarriga/vim-ultest"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/which-key.nvim",
@@ -297,6 +335,12 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+
+-- Command lazy-loads
+time([[Defining lazy-load commands]], true)
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file CodeActionMenu lua require("packer.load")({'nvim-code-action-menu'}, { cmd = "CodeActionMenu", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
+time([[Defining lazy-load commands]], false)
+
 if should_profile then save_profiles() end
 
 end)

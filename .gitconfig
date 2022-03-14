@@ -7,10 +7,28 @@
 [includeIf "gitdir:~/work/"]
     path = ~/work/.gitconfig
 
-
 [pull]
 	rebase = false
 [core]
 	autocrlf = input
+  pager = delta
+
 [alias]
 	up = !git push -u origin HEAD
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true  # use n and N to move between diff sections
+	side-by-side = true
+  features = ansi
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[include]
+  path=~/.config/delta/themes.gitconfig

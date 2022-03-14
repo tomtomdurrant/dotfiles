@@ -11,15 +11,15 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = true,
 	sources = {
-		null_ls.builtins.code_actions.eslint_d.with({
+		null_ls.builtins.code_actions.eslint.with({
 			prefer_local = "node_modules/.bin",
 		}),
-		formatting.prettierd.with({
+		formatting.prettier.with({
 			prefer_local = "node_modules/.bin",
 		}),
 		formatting.stylua,
-		diagnostics.eslint_d.with({
-			prefer_local = "node_modules/.bin",
-		}),
+		-- diagnostics.eslint.with({
+		-- 	prefer_local = "node_modules/.bin",
+		-- }),
 	},
 })
