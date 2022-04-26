@@ -47,3 +47,8 @@ function fzf-git-checkout() {
         git checkout $branch;
     fi
 }
+
+search ()
+{
+  grep -rnw . -e "$1"
+}

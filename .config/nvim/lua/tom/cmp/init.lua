@@ -111,6 +111,7 @@ cmp.setup({
 		end,
 	},
 	sources = {
+    { name = "copilot"},
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
 		{ name = "luasnip" },
@@ -121,9 +122,10 @@ cmp.setup({
 		behavior = cmp.ConfirmBehavior.Replace,
 		select = false,
 	},
-	documentation = {
-		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-	},
+	window = {
+    documentation = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+	}},
 	experimental = {
 		ghost_text = true,
 		native_menu = false,
