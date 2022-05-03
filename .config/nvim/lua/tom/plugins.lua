@@ -58,8 +58,11 @@ return packer.startup(function(use)
   use { "akinsho/bufferline.nvim", tag = "*" }
   use "famiu/bufdelete.nvim"
   use "nvim-lualine/lualine.nvim"
-  use "editorconfig/editorconfig-vim"
+  -- use "editorconfig/editorconfig-vim"
   use "goolord/alpha-nvim"
+  use ({"gpanders/editorconfig.nvim", config = function ()
+  	require('editorconfig')
+  end})
 
   -- Treesitter
   use({
@@ -91,6 +94,8 @@ return packer.startup(function(use)
   })
   -- language specific
   use "ckipp01/stylua-nvim"
+  -- Lua
+  use 'abecodes/tabout.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

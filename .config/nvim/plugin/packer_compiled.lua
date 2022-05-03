@@ -124,10 +124,11 @@ _G.packer_plugins = {
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["editorconfig-vim"] = {
+  ["editorconfig.nvim"] = {
+    config = { "\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17editorconfig\frequire\0" },
     loaded = true,
-    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/editorconfig-vim",
-    url = "https://github.com/editorconfig/editorconfig-vim"
+    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/editorconfig.nvim",
+    url = "https://github.com/gpanders/editorconfig.nvim"
   },
   ["everblush.vim"] = {
     loaded = true,
@@ -287,6 +288,11 @@ _G.packer_plugins = {
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/stylua-nvim",
     url = "https://github.com/ckipp01/stylua-nvim"
   },
+  ["tabout.nvim"] = {
+    loaded = true,
+    path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/tabout.nvim",
+    url = "https://github.com/abecodes/tabout.nvim"
+  },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,
     path = "/Users/tomdurrant/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim",
@@ -350,6 +356,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for trld.nvim]], true)
 try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ttrld\frequire\0", "config", "trld.nvim")
 time([[Config for trld.nvim]], false)
+-- Config for: editorconfig.nvim
+time([[Config for editorconfig.nvim]], true)
+try_loadstring("\27LJ\2\n,\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\17editorconfig\frequire\0", "config", "editorconfig.nvim")
+time([[Config for editorconfig.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

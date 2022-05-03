@@ -15,11 +15,18 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 # Terminal theme
 eval "$(starship init zsh)"
-
+function _run-cdi {
+  result="$(zoxide query -i)"
+  BUFFER="cd ${(q-)result}"
+  zle redisplay
+}
+zle -N _run-cdi{,}
 export EDITOR="nvim"
 . functions.zsh
 . aliases.zsh
 # . bindings.zsh
+bindkey "^G" _run-cdi
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # Use fnm instead of nvm 

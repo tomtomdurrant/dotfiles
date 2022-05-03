@@ -26,3 +26,5 @@ alias fj=fzf-git-checkout
 # homebrew
 alias bi='brew install'
 alias abi='arch -arm64 brew install'
+
+alias bin='cd ~/.local/bin/'
