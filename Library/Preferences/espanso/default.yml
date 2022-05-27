@@ -96,6 +96,27 @@ matches:
           cmd: echo "tomtest` date +"%d-%B-%H-%M"`@musclefood.com"
 
   - trigger: ":ady"
-    replace: "5555 3412 4444 1115"
+    replace: "5555 5555 5555 4444"
+  
+  - trigger: ":dus"
+    replace: "dev-uksouth"
  
+  - trigger: ":ius"
+    replace: "int-uksouth"
+
+  - trigger: ":lus"
+    replace: "live-uksouth"
+
+  - trigger: ":luw"
+    replace: "live-ukwest"
+
+  - trigger: ":pla"
+    replace: "Azure DevOps - Pre-Live Approvers"
+
+  - trigger: ":la"
+    replace: "Azure DevOps - Live Approvers"
+
+  - trigger: ":ga"
+    replace: "Azure DevOps - Global Admins"
+
 

@@ -21,11 +21,19 @@ function _run-cdi {
   zle redisplay
 }
 zle -N _run-cdi{,}
+
+
+function _sessions {
+ tmux neww ~/.local/bin/sessions.sh
+}
+zle -N _sessions
 export EDITOR="nvim"
 . functions.zsh
 . aliases.zsh
 # . bindings.zsh
 bindkey "^G" _run-cdi
+bindkey "^F" _sessions
+
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -44,3 +52,8 @@ eval $(thefuck --alias)
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
+
+# pnpm
+export PNPM_HOME="/Users/tom/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
