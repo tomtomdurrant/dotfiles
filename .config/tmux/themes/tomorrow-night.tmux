@@ -12,7 +12,7 @@ set -g status-bg black
 #Bars ---------------------------------
 set -g status-left "#[fg=black,bg=green]  #S #[fg=green,bg=black]$LEFT_SEPARATOR"
 
-set -g status-right "#[fg=black,bg=blue]$LEFT_SEPARATOR#[fg=black,bg=blue] %Y-%m-%d $LEFT_SUB_SEPARATOR %I:%M #[fg=green,bg=blue] $RIGHT_SEPARATOR#[bg=green,fg=black] #(whoami) "
+set -g status-right "#[fg=black,bg=blue]$LEFT_SEPARATOR#[fg=black,bg=blue] %Y-%m-%d $LEFT_SUB_SEPARATOR %H:%M #[fg=green,bg=blue] $RIGHT_SEPARATOR#[bg=green,fg=black] #(whoami) "
 
 # Windows ------------------------------
 set -g status-justify left 

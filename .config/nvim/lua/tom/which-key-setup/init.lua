@@ -139,7 +139,6 @@ local mappings = {
     -- 	"Diff",
     -- },
   },
-
   l = {
     name = "LSP",
     a = { "<cmd>CodeActionMenu<cr>", "Code Action" },
