@@ -1,5 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 # ZSH Config
 bindkey -v 
 if [[ `uname` == "Darwin" ]]; then
@@ -21,6 +21,8 @@ function _run-cdi {
   zle redisplay
 }
 zle -N _run-cdi{,}
+
+set -o ignoreeof
 
 
 function _sessions {
@@ -50,10 +52,10 @@ fi
 eval "$(zoxide init --cmd j zsh)"
 eval $(thefuck --alias)
 
-# Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"
-
 # pnpm
 export PNPM_HOME="/Users/tom/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
