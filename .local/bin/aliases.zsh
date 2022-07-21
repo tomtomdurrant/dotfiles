@@ -30,3 +30,10 @@ alias abi='arch -arm64 brew install'
 alias bin='cd ~/.local/bin/'
 
 alias cou='composer-update'
+
+alias f=fzVim
+
+fzVim ()
+{
+  nvim $(fzf)
+}

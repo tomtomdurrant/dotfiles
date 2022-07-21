@@ -80,12 +80,18 @@ return packer.startup(function(use)
 	use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 	use "jose-elias-alvarez/nvim-lsp-ts-utils" -- more lsp for typescript
 	use "b0o/schemastore.nvim" -- list of json schemas
-	use "RishabhRD/nvim-lsputils"
+	-- use "RishabhRD/nvim-lsputils"
 	use "ray-x/lsp_signature.nvim"
 	use "folke/trouble.nvim"
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+	})
 	-- use "github/copilot.vim"
-	use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
-	use "filipdutescu/renamer.nvim"
+	-- use({ "weilbith/nvim-code-action-menu", cmd = "CodeActionMenu" })
+
+	-- use "filipdutescu/renamer.nvim"
+	-- Plugin to display neovim line diagnostics on top right conrner with new line
 	use({
 		'Mofiqul/trld.nvim',
 		config = function()
@@ -141,8 +147,9 @@ return packer.startup(function(use)
 		as = "catppuccin"
 	})
 
-	-- testing
-	use({ "rcarriga/vim-ultest", requires = { "vim-test/vim-test" }, run = ":UpdateRemotePlugins" })
+	use "hrsh7th/nvim-pasta"
+
+
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

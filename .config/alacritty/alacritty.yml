@@ -22,7 +22,7 @@ font:
     family: DankMono Nerd Font
     style: Italic
   use_thin_strokes: true
-  size: 16
+  size: 18
   # use_thin_strokes: true
 
 key_bindings:

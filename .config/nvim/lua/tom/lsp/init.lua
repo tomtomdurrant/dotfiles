@@ -6,6 +6,14 @@ end
 require "tom.lsp.lsp-installer-config"
 require("tom.lsp.handlers").setup()
 require "tom.lsp.providers.null-ls"
--- require "tom.lsp.lsputils"
-require "tom.lsp.trouble"
-require "tom.lsp.rename"
+
+local lspsaga = require("lspsaga")
+lspsaga.init_lsp_saga()
+
+local trouble_status_ok, trouble = pcall(require, "trouble")
+if not trouble_status_ok then
+	return
+end
+
+trouble.setup()
+

@@ -1,0 +1,5 @@
+(
+    enter: Some("enter"),
+    shift: Some("shift-"),
+    esc: Some("esc")
+)
